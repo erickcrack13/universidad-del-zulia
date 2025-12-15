@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Contenido - Asistente LUZ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        #admin-container {
+            max-width: 700px; /* Ancho ampliado */
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        #auth-section, #content-section { text-align: center; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: #333; }
+        .form-group input { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; }
+        .admin-button { background: #007bff; color: white; border: none; padding: 15px 30px; border-radius: 8px; cursor: pointer; font-size: 1em; font-weight: 500; transition: background 0.3s ease; }
+        .admin-button:hover { background: #0056b3; }
+        #feedback { margin-top: 20px; font-weight: 500; }
+        a.back-link { display: inline-block; margin-top: 25px; color: #007bff; text-decoration: none; font-weight: 500; }
+        hr { margin: 40px 0; border: 0; border-top: 1px solid #e0e0e0; }
+
+        /* Estilos para la lista de estudiantes */
+        #student-list { list-style: none; padding: 0; margin-top: 20px; }
+        .student-item { background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; text-align: left; }
+        .student-item .info { font-size: 0.9em; }
+        .student-item .info strong { color: #005cb9; }
+        .student-item .grades { font-size: 0.8em; color: #555; }
+        .delete-btn { background: #dc3545; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div id="admin-container">
+        <div id="auth-section">
+            <h2>Panel de Gestión</h2>
+            <div class="form-group" style="max-width: 300px; margin: 20px auto;">
+                <label for="password">Contraseña de Administrador</label>
+                <input type="password" id="password" placeholder="Introduce la contraseña">
+            </div>
+            <button id="auth-btn" class="admin-button">Acceder</button>
+        </div>
+
+        <div id="content-section" style="display: none;">
+            <!-- Sección de Precios -->
+            <h2>Gestión de Costos del Chatbot</h2>
+            <div class="form-group">
+                <label for="price-inscription">Costo de Inscripción (USD)</label>
+                <input type="number" id="price-inscription" placeholder="Ej: 100">
+            </div>
+            <button id="save-price-btn" class="admin-button">Guardar Precio</button>
+            <div id="feedback-price"></div>
+
+            <hr>
+
+            <!-- Sección de Estudiantes -->
+            <h2>Gestión de Estudiantes</h2>
+            <form id="student-form" style="text-align: left;">
+                <div class="form-group">
+                    <label for="student-id">Cédula de Identidad</label>
+                    <input type="text" id="student-id" required placeholder="Ej: 28123456">
+                </div>
+                <div class="form-group">
+                    <label for="student-name">Nombre Completo</label>
+                    <input type="text" id="student-name" required placeholder="Ej: Ana Rincón">
+                </div>
+                <div class="form-group">
+                    <label>Materias y Notas</label>
+                    <div id="grades-container">
+                        <!-- Las materias se añadirán aquí dinámicamente -->
+                    </div>
+                    <button type="button" id="add-grade-btn">+ Añadir Materia</button>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="admin-button">Añadir Estudiante</button>
+                </div>
+            </form>
+            
+            <h3 style="margin-top: 30px;">Lista de Estudiantes Actual</h3>
+            <div id="student-list"></div>
+
+        </div>
+
+        <a href="index.html" class="back-link">Volver al Chatbot</a>
+    </div>
+
+    <script src="sim-database.js"></script> <!-- Aseguramos que la DB inicial se cree si no existe -->
+    <script src="admin.js"></script>
+</body>
+</html>

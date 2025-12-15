@@ -1,0 +1,58 @@
+[debug] [2025-12-15T19:18:11.019Z] ----------------------------------------------------------------------
+[debug] [2025-12-15T19:18:11.022Z] Command:       /nix/store/qds3rzxwqrkvhzjxgcb95d2qx4sd9b1l-nodejs-20.11.1/bin/node /home/user/.global_modules/bin/firebase login
+[debug] [2025-12-15T19:18:11.023Z] CLI Version:   15.0.0
+[debug] [2025-12-15T19:18:11.023Z] Platform:      linux
+[debug] [2025-12-15T19:18:11.023Z] Node Version:  v20.11.1
+[debug] [2025-12-15T19:18:11.024Z] Time:          Mon Dec 15 2025 19:18:11 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-12-15T19:18:11.024Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-15T19:18:11.027Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-12-15T19:18:11.125Z] No OAuth tokens found
+[debug] [2025-12-15T19:18:11.126Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[debug] [2025-12-15T19:18:11.178Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-12-15T19:18:11.179Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 
+[info] 
+[info] i  To change your preferences at any time, run `firebase logout` and `firebase login` again. 
+[debug] [2025-12-15T19:18:45.044Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2025-12-15T19:18:45.044Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"9bf3362d-1adf-47b5-917b-cd692eb9d759"}
+[debug] [2025-12-15T19:18:45.247Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2025-12-15T19:18:45.249Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"5TJ0JZSC_0qeWFIRrpS2NnD16pBiHLkBeUmDpZLp8P0"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    9BF33
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=c951T3NdhHg8x4H1bDVqyaXyTRfK-un6G3T33lk31Ho&session=9bf3362d-1adf-47b5-917b-cd692eb9d759&attest=5TJ0JZSC_0qeWFIRrpS2NnD16pBiHLkBeUmDpZLp8P0
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
+[debug] [2025-12-15T19:19:58.915Z] ----------------------------------------------------------------------
+[debug] [2025-12-15T19:19:58.918Z] Command:       /nix/store/qds3rzxwqrkvhzjxgcb95d2qx4sd9b1l-nodejs-20.11.1/bin/node /home/user/.global_modules/bin/firebase init
+[debug] [2025-12-15T19:19:58.918Z] CLI Version:   15.0.0
+[debug] [2025-12-15T19:19:58.918Z] Platform:      linux
+[debug] [2025-12-15T19:19:58.919Z] Node Version:  v20.11.1
+[debug] [2025-12-15T19:19:58.919Z] Time:          Mon Dec 15 2025 19:19:58 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-12-15T19:19:58.919Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-15T19:20:06.930Z] No OAuth tokens found
+[debug] [2025-12-15T19:20:06.931Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/gestion-de-notas
+

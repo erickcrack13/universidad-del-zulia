@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad del Zulia - Asistente</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">
+            <img src="images/LUZmini.png" alt="Logo LUZ" class="header-logo">
+            <div class="header-text">
+                <p>Asistente Virtual</p>
+            </div>
+            <!-- AQUÍ ESTÁ EL NUEVO BOTÓN DE ADMINISTRACIÓN -->
+            <a href="admin.html" class="admin-link" title="Administrar Precios">
+                <i class='bx bxs-cog'></i>
+            </a>
+        </div>
+        <div id="chat-box">
+            <!-- Los mensajes del chat aparecerán aquí -->
+        </div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
+            <button id="send-btn"><i class='bx bxs-paper-plane'></i></button>
+        </div>
+    </div>
+
+    <!-- Scripts del Simulador -->
+    <script src="sim-database.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
